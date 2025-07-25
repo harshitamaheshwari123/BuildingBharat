@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import PartnersMarquee from "../components/PartnersMarquee";
 import Testimonials from "../components/Testimonials";
 import CareerTracks from "../components/CareerTracks";
-import HeroSection from "../components/Herosection";
+import HeroSection from "../components/HeroSection";
 
 export default function Home() {
   const circularItems = [
