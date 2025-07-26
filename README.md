@@ -6,7 +6,11 @@ A beautifully designed web page made using Next.js and Tailwind CSS, built for a
 
 Building Bharat is a modern and responsive single-page web application showcasing impactful programs, testimonials, and learning opportunities aimed at empowering students and communities across India.
 
+
+
 ✨ The project includes added interactivity such as animations and device-adaptive layout — components automatically resize based on screen width to ensure a fluid experience across mobile, tablet, and desktop.
+
+
 
 🛠️ Tech Stack
 Framework: [Next.js](https://nextjs.org/)
@@ -17,11 +21,15 @@ Image Assets: Freely sourced from Google for design purposes
 Deployment: [Render](https://render.com/) – free hosting for full-stack applications
 
 
+
+
 🚀 Deployment
 
 The project is deployed on Render:
 
 🔗 Live URL: [https://buildingbharat-4x83.onrender.com/](https://buildingbharat-4x83.onrender.com/)
+
+
 
 
 🖼️ Screenshots
@@ -37,6 +45,8 @@ Testimonials Section
 
 Initiative Section 
 ![Initiative](https://github.com/user-attachments/assets/727197ac-7661-4b17-9f83-1b41e9574948)
+
+
 
 
 📂 Project Structure
@@ -57,6 +67,8 @@ Initiative Section
 
 /styles
 └── globals.css         → Tailwind global styles
+
+
 
 
 
@@ -81,13 +93,19 @@ bash
 npm run dev
 
 
+
+
 Visit [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
 
 📦 Build for Production
 
 bash
 npm run build
 npm start
+
+
 
 🌍 Where It Can Be Deployed
 
@@ -100,16 +118,24 @@ This app can be deployed to any platform that supports **Next.js**:
 ⚙️ [AWS Amplify](https://aws.amazon.com/amplify/)
 
 
+
+
 📸 Assets Attribution
 
 Icons from [Flaticon](https://www.flaticon.com/)
 Images freely sourced from Google (for placeholder/demo purposes)
 
+
+
 📬 Contact
 
 For questions, suggestions, or feedback, feel free to reach out:
 
+
+
 📧 Harshita – [harshitamaheshwari762@gmail.com](mailto:harshitamaheshwari762@gmail.com)
+
+
 
 🧩 Note
 
