@@ -14,10 +14,15 @@ Building Bharat is a modern and responsive single-page web application showcasin
 
 🛠️ Tech Stack
 Framework: [Next.js](https://nextjs.org/)
+
 Styling: [Tailwind CSS](https://tailwindcss.com/)
+
 Animations & Carousel: [Swiper.js](https://swiperjs.com/)
+
 Icons: [Flaticon](https://www.flaticon.com/)
+
 Image Assets: Freely sourced from Google for design purposes
+
 Deployment: [Render](https://render.com/) – free hosting for full-stack applications
 
 
