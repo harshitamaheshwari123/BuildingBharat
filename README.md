@@ -42,11 +42,14 @@ The project is deployed on Render:
 Header Section  
 ![Header](https://github.com/user-attachments/assets/ef3d5dcd-2d23-4836-a625-201e6e98fc15)
 
+
 Hero Section 
 ![Hero Section](https://github.com/user-attachments/assets/70adf261-db7b-4f46-845c-96ade31128aa)
 
+
 Testimonials Section
 ![Testimonials](https://github.com/user-attachments/assets/dd41a369-2fe5-4579-a751-7fa534997ed7)
+
 
 Initiative Section 
 ![Initiative](https://github.com/user-attachments/assets/727197ac-7661-4b17-9f83-1b41e9574948)
@@ -56,22 +59,36 @@ Initiative Section
 
 📂 Project Structure
 
+building-bharat/
+├── components/
+│   ├── CareerTracks.js         # Section showing career/internship opportunities
+│   ├── Header.js               # Top navigation bar
+│   ├── HeroSection.js          # Central section with animated icons
+│   ├── PartnersMarquee.js      # Auto-scrolling marquee of logos
+│   └── Testimonials.js         # Swiper.js carousel for testimonials
+│
+├── pages/
+│   ├── _app.js                 # Custom App component (imports global styles)
+│   └── index.js                # Main landing page of the app
+│
+├── public/                # Folder containing all static image assets
+│   │   ├── logo1.png
+│   │   ├── hero-image.jpg
+│   │   ├── testimonial1.png             
+│   │   ├── bulb.png
+│   │   ├── mike.png
+│   │   └── ...
+│
+├── styles/
+│   └── globals.css            # Tailwind CSS imports and base styles
+│
+├── .gitignore                 # Git ignore rules
+├── package.json               # Project dependencies and scripts
+├── postcss.config.js          # PostCSS config (Tailwind uses this)
+├── tailwind.config.js         # Tailwind customization
+├── next.config.js             # Next.js config (optional if not modified)
+└── README.md                  # Documentation (the one you're working on)
 
-/pages
-└── index.js            → Main page
-
-/components
-├── Header.js           → Top navigation bar
-├── HeroSection.js      → Landing hero section
-├── PartnersMarquee.js  → Scrolling partner logos
-├── Testimonials.js     → Swiper testimonial carousel
-└── CareerTracks.js     → Showcase different opportunities
-
-/public
-└── images              → Logos and visual assets
-
-/styles
-└── globals.css         → Tailwind global styles
 
 
 
@@ -82,19 +99,23 @@ Initiative Section
 1. Clone the repository
 
 bash
+
 git clone https://github.com/your-username/building-bharat.git
+
 cd building-bharat
 
 
 2. Install dependencies
 
 bash
+
 npm install
 
 
 3. Run the development server
 
 bash
+
 npm run dev
 
 
@@ -121,11 +142,6 @@ This app can be deployed to any platform that supports **Next.js**:
 🚀 [Vercel](https://vercel.com/) (Recommended for Next.js)
 
 🌐 [Netlify](https://netlify.com/) (with adapter)
-
-☁️ [Heroku](https://heroku.com/)
-
-⚙️ [AWS Amplify](https://aws.amazon.com/amplify/)
-
 
 
 
