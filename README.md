@@ -129,11 +129,6 @@ This app can be deployed to any platform that supports **Next.js**:
 
 
 
-📸 Assets Attribution
-
-Icons from [Flaticon](https://www.flaticon.com/)
-Images freely sourced from Google (for placeholder/demo purposes)
-
 
 
 📬 Contact
