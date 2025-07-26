@@ -122,11 +122,10 @@ export default function CircularCareerTracks() {
   return (
     <div className="w-full flex justify-center items-center py-16 bg-orange-50 select-none">
       <div className="relative" style={{ width: 440, height: 440 }}>
-        {/* Icons in a circle */}
         {tracks.map((track, idx) => {
           const angle = (idx / tracks.length) * 2 * Math.PI;
-          const x = center + radius * Math.cos(angle) - 44; // 44 = icon box half width
-          const y = center + radius * Math.sin(angle) - 44; // 44 = icon box half height
+          const x = center + radius * Math.cos(angle) - 44; 
+          const y = center + radius * Math.sin(angle) - 44; 
           return (
             <div
               key={idx}
@@ -148,7 +147,6 @@ export default function CircularCareerTracks() {
             </div>
           );
         })}
-        {/* Center: Building BHARAT */}
         <div
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center cursor-pointer z-30"
           onMouseEnter={handleMouseEnter}

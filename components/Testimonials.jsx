@@ -24,7 +24,7 @@ export default function Testimonials() {
       name: "Sneha Roy",
       role: "Social Impact Fellow, Kolkata",
       text: `<span class="font-bold text-2xl block mb-2">From Doubt to Impactful Career Path</span>
-       I used to believe students from tier 3 colleges couldn't compete. But Building Bharat changed my mindset. Through their programs, I built a strong portfolio, worked on local issues, and even led a state-level hackathon! This journey isn't just about jobs it's about purpose. I'm more confident, skilled, and connected to a mission bigger than myself."`,
+        I used to believe students from tier 3 colleges couldn't compete. But Building Bharat changed my mindset. Through their programs, I built a strong portfolio, worked on local issues, and even led a state-level hackathon! This journey isn't just about jobs — it's about purpose. I'm more confident, skilled, and connected to a mission bigger than myself."`,
       image: "/girl.jpeg",
     },
   ];
@@ -32,15 +32,15 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="bg-gray-50 py-14 px-4" id="testimonials">
-      <h2 className="text-center text-3xl font-bold text-green-900 mb-10">
+    <section className="bg-white py-14 px-4" id="testimonials">
+      <h2 className="text-center text-5xl font-bold text-green-900 mb-10">
         Stories That Inspire
       </h2>
 
       <Swiper
         modules={[Autoplay]}
         autoplay={{
-          delay: 3000,
+          delay: 2000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
@@ -52,38 +52,40 @@ export default function Testimonials() {
       >
         {testimonials.map((t, idx) => (
           <SwiperSlide key={idx}>
-            <div className="bg-white rounded-3xl shadow-xl flex flex-col md:flex-row items-center md:items-start p-8 md:p-12 max-w-5xl mx-auto transition-all duration-500">
-              {/* Text Left */}
-              <div className="flex-1 text-left md:pr-10">
+            <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl flex flex-col md:flex-row items-center md:items-start p-8 md:p-12 max-w-5xl mx-auto transition-all duration-500 relative">
+              
+            
+              <div className="flex-1 text-left md:pr-12 w-full">
                 <div
                   className="text-gray-800 text-lg leading-relaxed mb-6"
                   dangerouslySetInnerHTML={{ __html: t.text }}
                 />
-                <p className="text-orange-600 font-bold text-lg">{t.name}</p>
-                <p className="text-gray-600 font-medium">{t.role}</p>
+                <p className="text-orange-600 font-bold text-2lg">{t.name}</p>
+                <p className="text-gray-600 font-medium mb-4">{t.role}</p>
               </div>
-              {/* Image Right */}
+
+              
               <img
                 src={t.image}
                 alt={t.name}
-                className="w-50 h-60 rounded-2xl object-cover mt-6 md:mt-0 md:ml-10"
+                className="w-48 h-60 rounded-2xl object-cover mt-6 md:mt-0 md:ml-10"
               />
+
+             
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-4">
+                {testimonials.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`h-1 rounded-full transition-all duration-300 ${
+                      activeIndex === i ? "bg-black w-10" : "bg-gray-300 w-24"
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Dot Indicator */}
-      <div className="flex justify-center items-center gap-6 mt-8">
-        {testimonials.map((_, idx) => (
-          <div
-            key={idx}
-            className={`h-3 rounded-full transition-all duration-300 ${
-              activeIndex === idx ? "bg-black w-16" : "bg-gray-300 w-10"
-            }`}
-          />
-        ))}
-      </div>
     </section>
   );
 }

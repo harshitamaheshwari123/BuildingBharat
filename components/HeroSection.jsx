@@ -1,4 +1,7 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const items = [
   { icon: "/mindset.png", label: "Research" },
@@ -10,14 +13,15 @@ const items = [
 ];
 
 export default function HeroSection() {
+  const [showIcons, setShowIcons] = useState(false);
+
   return (
-    <div className="relative bg-white px-6 md:px-12 lg:px-24 py-12 flex flex-col md:flex-row items-start md:items-center justify-between">
-      {/* Text Section */}
+    <div className="relative bg-white pl-8 pr-16 md:pl-28 md:pr-36 pt-20 pb-28 mt-6 flex flex-col md:flex-row items-start md:items-center justify-between">
       <div className="max-w-xl">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#00473C] leading-tight mb-4">
+        <h1 className="text-6xl md:text-5xl font-bold text-[#00473C] leading-tight mb-4">
           Crack Political and policies roles with Confidence!
         </h1>
-        <p className="text-3xl font-extrabold text-orange-600 mb-4">
+        <p className="text-4xl font-extrabold text-orange-600 mb-4">
           Learn. Lead. Transform Bharat
         </p>
         <p className="text-gray-800 mb-6 text-lg">
@@ -35,51 +39,69 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Rotating Section */}
-      <div className="relative mt-12 md:mt-0 group w-[300px] h-[300px] flex items-center justify-center">
-        {/* Central Text */}
-        <div className="text-center z-20 absolute">
-          <h2 className="text-4xl font-bold text-[#00473C]">Building</h2>
-          <h2 className="text-5xl font-bold text-orange-600">BHARAT</h2>
+      <div
+        className="relative mt-12 md:mt-0 group w-[400px] h-[400px] flex items-center justify-center px-4"
+        onMouseEnter={() => setShowIcons(true)}
+      >
+        <div className="text-center z-20 cursor-pointer">
+          <h2 className="text-7xl font-bold text-[#00473C]">Building</h2>
+          <h2 className="text-7xl font-bold text-orange-600">BHARAT</h2>
         </div>
 
-        {/* Icon Circle (Initially hidden) */}
-        <div className="absolute w-full h-full flex items-center justify-center">
-          <div className="relative w-full h-full opacity-0 group-hover:opacity-100 group-hover:animate-spin-slow transition-opacity duration-700">
+        <div className="absolute w-full h-full flex items-center justify-center pointer-events-none">
+          <div className="relative w-full h-full">
             {items.map((item, i) => {
               const angle = (360 / items.length) * i;
-              const radius = 120;
 
               return (
-                <div
+                <motion.div
                   key={i}
-                  className="absolute"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={
+                    showIcons
+                      ? {
+                          opacity: 1,
+                          scale: [1, 1.15, 1],
+                          x: [
+                            350 * Math.cos((angle * Math.PI) / 180),
+                            280 * Math.cos((angle * Math.PI) / 180),
+                            230 * Math.cos((angle * Math.PI) / 180),
+                            280 * Math.cos((angle * Math.PI) / 180),
+                          ],
+                          y: [
+                            350 * Math.sin((angle * Math.PI) / 180),
+                            280 * Math.sin((angle * Math.PI) / 180),
+                            230 * Math.sin((angle * Math.PI) / 180),
+                            280 * Math.sin((angle * Math.PI) / 180),
+                          ],
+                        }
+                      : {}
+                  }
+                  transition={{
+                    duration: 3.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="absolute flex flex-col items-center"
                   style={{
-                    top: "50%",
                     left: "50%",
-                    transform: `
-                      rotate(${angle}deg)
-                      translate(${radius}px)
-                      rotate(${-angle}deg)
-                    `,
-                    transformOrigin: "center",
+                    top: "50%",
+                    transform: "translate(-50%, -50%)",
                   }}
                 >
-                  <div className="flex flex-col items-center">
-                    <div className="bg-orange-100 p-2 rounded-full shadow-md hover:scale-110 transition-transform duration-300">
-                      <Image
-                        src={item.icon}
-                        alt={item.label}
-                        width={40}
-                        height={40}
-                        unoptimized
-                      />
-                    </div>
-                    <span className="text-sm text-[#00473C] mt-1 text-center whitespace-nowrap">
-                      {item.label}
-                    </span>
-                  </div>
-                </div>
+                  <motion.div className="rounded-full">
+                    <Image
+                      src={item.icon}
+                      alt={item.label}
+                      width={40}
+                      height={40}
+                      unoptimized
+                    />
+                  </motion.div>
+                  <span className="text-sm text-[#00473C] mt-1 text-center whitespace-nowrap">
+                    {item.label}
+                  </span>
+                </motion.div>
               );
             })}
           </div>

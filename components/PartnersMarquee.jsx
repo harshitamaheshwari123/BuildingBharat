@@ -11,12 +11,11 @@ const logos = [
 
 export default function PartnersMarquee() {
   return (
-    <div className="bg-white py-6 overflow-hidden">
+    <div className="bg-white py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="relative w-full">
-          {/* Outer container for smoother scrolling */}
+         
           <div className="overflow-hidden">
-            {/* Animated scrolling track */}
             <div className="flex items-center space-x-8 animate-marquee will-change-transform">
               {logos.concat(logos).map((logo, idx) => (
                 <div

@@ -1,70 +1,55 @@
+import Image from "next/image";
+
 export default function CareerTracks() {
   const tracks = [
     {
       icon: (
-        <svg
-          width="48"
-          height="48"
-          fill="none"
-          stroke="#fb8500"
-          strokeWidth="2.5"
-          viewBox="0 0 24 24"
-        >
-          <path d="M12 3L2 8.5l10 5.5 10-5.5L12 3z" />
-          <path d="M2 8.5v7a2 2 0 001 1.73l9 5.2 9-5.2a2 2 0 001-1.73v-7" />
-        </svg>
+        <Image
+          src="/scholar.png"
+          alt="College Students"
+          width={48}
+          height={48}
+          unoptimized
+        />
       ),
       title: "College Students",
       desc: "Students from any discipline looking to build a career in politics and policy",
     },
     {
       icon: (
-        <svg
-          width="48"
-          height="48"
-          fill="none"
-          stroke="#fb8500"
-          strokeWidth="2.5"
-          viewBox="0 0 24 24"
-        >
-          <path d="M17 1l4 4-4 4" />
-          <path d="M7 23l-4-4 4-4" />
-          <path d="M3 5h7a4 4 0 014 4v12" />
-          <path d="M21 19h-7a4 4 0 01-4-4V3" />
-        </svg>
+        <Image
+          src="/exchange.png"
+          alt="Career Switchers"
+          width={48}
+          height={48}
+          unoptimized
+        />
       ),
       title: "Career Switchers",
       desc: "Professionals from other fields wanting to transition into political consulting",
     },
     {
       icon: (
-        <svg
-          width="48"
-          height="48"
-          fill="none"
-          stroke="#fb8500"
-          strokeWidth="2.5"
-          viewBox="0 0 24 24"
-        >
-          <circle cx="12" cy="8" r="4" />
-          <path d="M2 21v-2a4 4 0 014-4h12a4 4 0 014 4v2" />
-        </svg>
+        <Image
+          src="/give-love.png"
+          alt="Young Professionals"
+          width={48}
+          height={48}
+          unoptimized
+        />
       ),
       title: "Young Professionals",
       desc: "Early-career professionals seeking to specialize in government and policy work",
     },
     {
       icon: (
-        <svg
-          width="48"
-          height="48"
-          fill="none"
-          stroke="#fb8500"
-          strokeWidth="2.5"
-          viewBox="0 0 24 24"
-        >
-          <path d="M12 21s-6-4.35-6-10A6 6 0 0112 3a6 6 0 016 6c0 5.65-6 10-6 10z" />
-        </svg>
+        <Image
+          src="/user.png"
+          alt="Policy Enthusiasts"
+          width={48}
+          height={48}
+          unoptimized
+        />
       ),
       title: "Policy Enthusiasts",
       desc: "Anyone passionate about public service and creating positive social impact",
