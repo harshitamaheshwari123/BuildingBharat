@@ -117,9 +117,13 @@ npm start
 This app can be deployed to any platform that supports **Next.js**:
 
 ✅ [Render](https://render.com/)
+
 🚀 [Vercel](https://vercel.com/) (Recommended for Next.js)
+
 🌐 [Netlify](https://netlify.com/) (with adapter)
+
 ☁️ [Heroku](https://heroku.com/)
+
 ⚙️ [AWS Amplify](https://aws.amazon.com/amplify/)
 
 
