@@ -5,10 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "postinstall": "npx@netlify/next"
+    "start": "next start"
   },
-  
+
   "dependencies": {
     "framer-motion": "^12.23.9",
     "next": "13.4.12",
