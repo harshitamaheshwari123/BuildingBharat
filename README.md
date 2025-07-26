@@ -21,24 +21,24 @@ Building Bharat is a modern and responsive single-page web application showcasin
 
 The project is deployed on Render:
 
-🌐 **Live URL**: https://buildingbharat-4x83.onrender.com/
+🌐 Live URL: https://buildingbharat-4x83.onrender.com/
 
----
+🖼️ Screenshots
 
-## 🖼️ Screenshots
+Header Section
+![Header](https://github.com/user-attachments/assets/ef3d5dcd-2d23-4836-a625-201e6e98fc15)
 
-Header - [<img width="1920" height="1020" alt="Screenshot 2025-07-26 120144" src="https://github.com/user-attachments/assets/ef3d5dcd-2d23-4836-a625-201e6e98fc15" />
-]
-HeroSection - [<img width="1920" height="1020" alt="Screenshot 2025-07-26 120203" src="https://github.com/user-attachments/assets/70adf261-db7b-4f46-845c-96ade31128aa" />
-]
-Testimonials - [<img width="1920" height="1020" alt="Screenshot 2025-07-26 114109" src="https://github.com/user-attachments/assets/dd41a369-2fe5-4579-a751-7fa534997ed7" />
-]
-Initiative - [<img width="1920" height="1020" alt="Screenshot 2025-07-26 114119" src="https://github.com/user-attachments/assets/727197ac-7661-4b17-9f83-1b41e9574948" />
-]
+Hero Section* 
+![Hero Section](https://github.com/user-attachments/assets/70adf261-db7b-4f46-845c-96ade31128aa)
+
+Testimonials Section 
+![Testimonials](https://github.com/user-attachments/assets/dd41a369-2fe5-4579-a751-7fa534997ed7)
+
+Initiative Section 
+![Initiative](https://github.com/user-attachments/assets/727197ac-7661-4b17-9f83-1b41e9574948)
 
 
-
-## 📂 Project Structure
+📂 Project Structure
 
 /pages
 └── index.js           → Main page
